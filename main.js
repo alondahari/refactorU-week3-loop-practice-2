@@ -10,7 +10,21 @@ var problem2 = function(arr){
   });
 };
 
+var problem3 = function(arr){
+  // slice to make a copy and not a reference
+  return arr.slice().reverse();
+};
 
+var problem4 = function(arr){
+  var newArr = [];
+  arr.forEach(function(val, i, arr){
+    newArr.push(val);
+    if (i !== 0 && i !== (arr.length-1)) {
+      newArr.push(val);
+    }
+  });
+  return newArr;
+};
 
 console.log('problem1:', problem1(animals));
 console.log('problem2:', problem2(animals));
